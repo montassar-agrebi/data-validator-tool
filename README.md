@@ -1,5 +1,9 @@
 <h1>📊 Data Validation & Reconciliation Tool</h1>
 
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![Streamlit](https://img.shields.io/badge/framework-streamlit-red)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 <p>
 A Python-based application designed to automate data validation between 
 <strong>source</strong> and <strong>target datasets</strong> during 
@@ -250,6 +254,14 @@ data-validator-tool
 </ul>
 
 <p><em>Screenshots of the interface can be added in this section.</em></p>
+
+<hr>
+
+<h2>Application Preview</h2>
+
+<p align="center">
+<img src="screenshots/dashboard.png" width="900">
+</p>
 
 <hr>
 
