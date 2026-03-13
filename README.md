@@ -1,15 +1,15 @@
-<h1>Data Validation & Reconciliation Tool</h1>
+<h1>📊 Data Validation & Reconciliation Tool</h1>
 
 <p>
 A Python-based application designed to automate data validation between 
 <strong>source</strong> and <strong>target datasets</strong> during 
-data migration or ETL testing.
+data migration, ETL validation, or system reconciliation processes.
 </p>
 
 <p>
-The tool helps analysts and engineers quickly detect inconsistencies,
-missing records, and column mismatches between datasets while providing
-clear migration health insights.
+The tool allows analysts and data engineers to quickly detect 
+data inconsistencies, missing records, and column mismatches while
+providing clear insights about overall data migration health.
 </p>
 
 <hr>
@@ -17,94 +17,132 @@ clear migration health insights.
 <h2>Overview</h2>
 
 <p>
-Data migrations and ETL transformations often require validating that
-the target dataset accurately reflects the source system.
-Manual spreadsheet comparisons become inefficient and error-prone
-when dealing with large datasets.
+Data migrations and ETL pipelines require validating that the
+target system accurately reflects the source dataset.
 </p>
 
 <p>
-This tool automates the validation process and produces structured
-reports that highlight discrepancies and data quality issues.
+Manual spreadsheet comparisons become inefficient and unreliable
+when working with large datasets or complex schemas.
+</p>
+
+<p>
+This application automates the validation workflow and produces
+clear validation summaries that highlight discrepancies
+between datasets.
 </p>
 
 <hr>
 
 <h2>Key Features</h2>
 
-<h3>Flexible Key Selection</h3>
+<h3>Flexible Primary Key Selection</h3>
+
 <p>
-Users can manually select the <strong>primary comparison key</strong>
-used to match records between the source and target datasets.
+Users can manually select the <strong>primary key</strong>
+used to align records between the source and target datasets.
 </p>
 
 <p>
-This allows validation across different table structures and
-migration scenarios.
+This flexibility allows validation across different table
+structures and migration scenarios.
 </p>
 
 <h3>Duplicate Key Detection</h3>
 
 <p>
-The tool automatically checks the selected comparison key for
-duplicate values.
+The tool automatically checks the selected comparison key
+for duplicate values in both datasets.
 </p>
 
 <p>
-If duplicates are detected, the validation process stops and
-an error message is displayed to prevent incorrect comparisons.
-Users can then select a different column as the comparison key.
+If duplicates are detected, validation stops and an error message
+is displayed to prevent incorrect comparisons.
 </p>
 
-<h3>Dataset Validation</h3>
+<p>
+Users can then select another column as the comparison key.
+</p>
 
-<p>The validator compares:</p>
-
-<ul>
-<li>dataset schema</li>
-<li>row counts</li>
-<li>record presence between source and target</li>
-</ul>
+<h3>Dataset Alignment</h3>
 
 <p>
-This helps detect missing or extra records during migrations.
+The validator aligns rows between datasets using the selected key
+before performing comparisons.
+</p>
+
+<p>
+It also detects records that exist only in one dataset,
+helping identify potential data loss or unexpected records.
 </p>
 
 <h3>Column-Level Validation</h3>
 
-<p>The tool detects column inconsistencies including:</p>
+<p>
+Each column shared between the datasets is compared to detect
+value differences including:
+</p>
 
 <ul>
 <li>value mismatches</li>
 <li>null inconsistencies</li>
-<li>missing data</li>
+<li>missing values</li>
+<li>unexpected value changes</li>
+</ul>
+
+<h3>Comparison Modes</h3>
+
+<p>The tool provides two comparison modes:</p>
+
+<ul>
+<li><strong>Normalized Mode</strong> – removes formatting differences such as case sensitivity, trailing spaces, and numeric formatting</li>
+<li><strong>Strict Mode</strong> – compares values exactly as stored in the datasets</li>
 </ul>
 
 <h3>Migration Health Insights</h3>
 
 <p>
-A validation summary provides an overview of the migration status,
-including:
+After validation, the application produces a summary
+showing the overall data migration health.
 </p>
 
+<p>The dashboard includes:</p>
+
 <ul>
-<li>overall validation health</li>
-<li>number of mismatched rows</li>
-<li>affected columns</li>
-<li>data quality indicators</li>
+<li>rows compared</li>
+<li>columns compared</li>
+<li>mismatched values</li>
+<li>rows containing discrepancies</li>
+<li>attribute accuracy scores</li>
+</ul>
+
+<h3>Mismatch Classification</h3>
+
+<p>
+Detected issues are automatically categorized to help
+understand the root cause of discrepancies.
+</p>
+
+<p>Examples include:</p>
+
+<ul>
+<li>perfect matches</li>
+<li>missing values on source</li>
+<li>missing values on target</li>
+<li>mostly incorrect values</li>
+<li>mixed mismatch patterns</li>
 </ul>
 
 <h3>Issue Sampling for Tracking</h3>
 
 <p>
-For each column containing discrepancies, the tool generates
-<strong>up to five sample records</strong> showing the detected issue.
+For each column containing mismatches, the tool generates
+<strong>up to five example records</strong> showing the detected issue.
 </p>
 
 <p>
-These samples are formatted as text so they can be easily copied
-into validation trackers, issue logs, hierarchy reports,
-or migration documentation.
+These samples are formatted as text so they can easily be copied
+into issue trackers, validation logs, or data quality reports.
 </p>
 
 <hr>
@@ -112,13 +150,13 @@ or migration documentation.
 <h2>Quick Launch (Recommended)</h2>
 
 <p>
-For convenience, the repository includes a <strong>Windows launcher</strong>
-that starts the application without requiring a Python installation.
+The repository includes a <strong>Windows launcher</strong>
+allowing the application to run without installing Python manually.
 </p>
 
 <p>
 The launcher uses a bundled <strong>portable Python environment</strong>
-and installs required dependencies automatically if needed.
+and installs required dependencies automatically when needed.
 </p>
 
 <p>To run the application:</p>
@@ -126,18 +164,18 @@ and installs required dependencies automatically if needed.
 <ol>
 <li>Download or clone the repository</li>
 <li>Open the project folder</li>
-<li>Double-click <strong>launch_validator.bat</strong></li>
+<li>Double-click <strong>🚀 Start Data Validation Tool.bat</strong></li>
 </ol>
 
 <p>
-The Streamlit application will automatically open in your browser.
+The Streamlit dashboard will automatically open in your browser.
 </p>
 
 <hr>
 
 <h2>Developer Setup</h2>
 
-<p>If you prefer running the tool manually:</p>
+<p>If you prefer running the application manually:</p>
 
 <p>Install dependencies:</p>
 
@@ -148,7 +186,7 @@ pip install -r requirements.txt
 <p>Run the application:</p>
 
 <pre><code>
-streamlit run app/app.py
+streamlit run app.py
 </code></pre>
 
 <hr>
@@ -171,11 +209,12 @@ data-validator-tool
 ├── launch_validator.bat
 ├── python_portable/
 │
-├── app/
-│   └── app.py
+├── app.py
 │
 ├── src/
-│   └── validator_engine.py
+│   ├── validator.py
+│   ├── comparison.py
+│   └── profiling.py
 │
 ├── sample_data/
 │
@@ -193,8 +232,9 @@ data-validator-tool
 <li>Upload the source dataset</li>
 <li>Upload the target dataset</li>
 <li>Select the comparison key</li>
+<li>Choose the comparison mode</li>
 <li>Run the validation</li>
-<li>Review mismatch reports and migration insights</li>
+<li>Review mismatch insights and migration metrics</li>
 </ol>
 
 <hr>
@@ -203,9 +243,10 @@ data-validator-tool
 
 <ul>
 <li>dataset comparison metrics</li>
-<li>column mismatch reports</li>
+<li>column accuracy scores</li>
 <li>migration health summary</li>
-<li>sample issue records for tracking</li>
+<li>mismatch samples for issue tracking</li>
+<li>exportable mismatch reports</li>
 </ul>
 
 <p><em>Screenshots of the interface can be added in this section.</em></p>
@@ -216,7 +257,8 @@ data-validator-tool
 
 <ul>
 <li>database connection support</li>
-<li>automated validation report export</li>
+<li>automated validation report exports</li>
 <li>large dataset optimization</li>
-<li>scheduled validation jobs</li>
+<li>scheduled validation workflows</li>
+<li>support for additional file formats</li>
 </ul>
