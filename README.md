@@ -262,3 +262,13 @@ data-validator-tool
 <li>scheduled validation workflows</li>
 <li>support for additional file formats</li>
 </ul>
+
+<h2>Download Portable Version</h2>
+
+<p>
+A portable version of the application is available in the repository releases.
+</p>
+
+<p>
+Download the ZIP package and run the launcher to start the tool without installing Python.
+</p>
