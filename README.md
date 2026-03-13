@@ -260,7 +260,15 @@ data-validator-tool
 <h2>Application Preview</h2>
 
 <p align="center">
-<img src="screenshots/dashboard.png" width="900">
+<img src="screenshots/Shot3.png" width="900">
+</p>
+
+<p align="center">
+<img src="screenshots/Shot1.png" width="900">
+</p>
+
+<p align="center">
+<img src="screenshots/Shot2.png" width="900">
 </p>
 
 <hr>
